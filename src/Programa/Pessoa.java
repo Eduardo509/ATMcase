@@ -1,7 +1,11 @@
 package Programa;
 
-public class Pessoa {
+public class
+Pessoa {
     private static int counter = 1;
+    private String nome;
+    private String CPF;
+    private String email;
 
     public Pessoa(String nome, String CPF, String email) {
         this.nome = nome;
@@ -33,10 +37,6 @@ public class Pessoa {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    private String nome;
-    private String CPF;
-    private String email;
 
     @Override
     public String toString() {
