@@ -3,7 +3,7 @@ package Programa;
 import java.util.Scanner;
 
 import static Programa.AgenciaBancaria.encontrarConta;
-import static Programa.AgenciaBancaria.operacoes;
+import static Programa.Operacoes.operacoes;
 
 public class Trasferir {
     private static Scanner imput = new Scanner(System.in);

@@ -2,8 +2,9 @@ package Programa;
 
 import java.util.Scanner;
 
+import static Autenticate.test.cadastro;
 import static Programa.AgenciaBancaria.contasBancarias;
-import static Programa.AgenciaBancaria.operacoes;
+import static Programa.Operacoes.operacoes;
 
 
 public class criarConta {
@@ -25,6 +26,6 @@ public class criarConta {
 
         contasBancarias.add(conta);
         System.out.println("Conta criada"+ conta);
-        operacoes();
+        cadastro();
     }
 }

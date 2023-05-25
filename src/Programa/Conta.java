@@ -85,4 +85,13 @@ public class Conta {
             System.out.println("Não foi possivel realizar a transferencia");
         }
     }
+
+    public void autentificar(String cpf){
+        if (pessoa.getCPF().equals(cpf)){
+            System.out.println("Autenticado!!");
+        }else{
+            System.out.println("CPF incorreto");
+        }
+
+    }
 }
