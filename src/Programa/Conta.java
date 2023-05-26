@@ -2,12 +2,24 @@ package Programa;
 
 import utilitarios.Utils;
 
+import static Autenticate.autentificar.autenticar;
+import static Autenticate.test.cadastro;
+import static Programa.AgenciaBancaria.imput;
+
 public class Conta {
 
     private static int contadorDeContas = 1;
     private int numeroDeConta;
     private Pessoa pessoa;
     public double saldo = 0.0;
+    public int senha;
+
+    public int getSenha() {
+        return senha;
+    }
+    public  void setSenha(int senha){
+        this.senha =  senha;
+    }
 
     public Conta(Pessoa pessoa) {
         this.numeroDeConta = contadorDeContas;
@@ -86,12 +98,17 @@ public class Conta {
         }
     }
 
-    public void autentificar(String cpf){
-        if (pessoa.getCPF().equals(cpf)){
-            System.out.println("Autenticado!!");
+    public static int definirSenha(int senha, int senhac){
+        if (senha == senhac){
+            System.out.println("Senha criada");
         }else{
-            System.out.println("CPF incorreto");
+            System.out.println("Senhas não coicidem");
+            cadastro();
         }
 
+        return senha;
+
     }
+
+
 }

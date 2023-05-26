@@ -1,7 +1,10 @@
 package Autenticate;
 import Programa.Conta;
 import java.util.Scanner;
+
+import static Autenticate.test.cadastro;
 import static Programa.AgenciaBancaria.encontrarConta;
+import static Programa.Operacoes.operacoes;
 
 public class autentificar {
     static Scanner imput = new Scanner(System.in);
@@ -12,10 +15,19 @@ public class autentificar {
         Conta conta = encontrarConta(numeroConta);
 
         if (conta != null){
-            System.out.println("Digite o CPF ");
-            String cpf;
-            cpf = imput.nextLine();
-            conta.autentificar(cpf);
+            System.out.println("Digite a senha ");
+            int senha = imput.nextInt();
+            if (senha==conta.getSenha()){
+                System.out.println("Autenticado !!");
+                operacoes();
+            }else{
+                System.out.println("senha incorreta, tente novamente");
+            } cadastro();
+
+        }else{
+            System.out.println("Conta não localizada");
+            cadastro();
         }
     }
+
 }
