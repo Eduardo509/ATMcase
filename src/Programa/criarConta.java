@@ -23,13 +23,16 @@ public class criarConta {
     public static void criarconta(){
 
         System.out.println("Nome");
-        String nome = imput.next();
+        String nome ;
+        nome = imput.nextLine();
 
         System.out.println("CPF");
-        String cpf = imput.nextLine();
+        String cpf;
+        cpf = imput.nextLine();
 
         System.out.println("E-Mail");
-        String email = imput.nextLine();
+        String email;
+        email = imput.nextLine();
 
         System.out.println("digite uma senha numerica");
         int senha = imput.nextInt();
